@@ -30,5 +30,19 @@ div.container, div.row, form {
 
 .container {
     width: 600px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+#swap {
+    float: right;
+}
+
+#bottomMenu {
+    width: 600px;
     margin: 0 auto;
 }
