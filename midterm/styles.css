@@ -15,7 +15,7 @@ div.container, div.row, form {
     div.row > div > img {
     display: inline-block;
     position: absolute;
-    width: 100px;
+    width: 400px;
     bottom: 30px;
     }
     .visible {
