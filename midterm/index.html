@@ -4,25 +4,28 @@
 	<meta charset="utf-8"/>
 	<link rel="stylesheet" href="styles.css">
 	<title>CS355 Midterm Part B</title>
-</head>
 
-<script>
-	$("document").ready(function(){
-		var images = [];
-    for (var i = 0; i < 9; i++) {
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <script>
+  $("document").ready(function(){
+    var images = [];
+    for (var i = 1; i < 10; i++) {
   images.push("https://buminga.github.io/cs355/midterm/img/" + i + ".png");
-}
+   }
     
 var imagesused = [];
 $('.container div:not(.row)').each(function() {
     var rand = Math.floor(Math.random() * images.length);
     $(this).append('<img src="' + images[rand] + '"/>');
-    if (imagesused.indexOf(images[rand]) != -1) images.splice(rand, 1);
-    else imagesused.push(images[rand]);
+    images.splice(rand, 1);
     console.log(images);
 });
 });
+
+
 </script>
+</head>
 
 <body>
 	<h1>Image Scrambler</h1>
@@ -33,22 +36,19 @@ $('.container div:not(.row)').each(function() {
   <div></div>
   <div></div>
   <div></div>
-  <div></div>
  </div>
  <div class="row">
   <div></div>
   <div></div>
   <div></div>
-  <div></div>
  </div>
  <div class="row">
-  <div></div>
   <div></div>
   <div></div>
   <div></div>
  </div>
  </div>
  <form>
- <input type="button" value="Play again">
+ <button id="scramble" value="Scramble Me">Scramble Me</button>
  </form>
 </body>

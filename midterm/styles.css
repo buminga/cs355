@@ -1,22 +1,22 @@
+h1, h2 {
+    text-align: center;
+}
+
 div.container, div.row, form {
+    width: 600px;
+    margin: 0 auto;
     clear: both;
     }
     div.row > div {
     position: relative;
     float: left;
-    width: 400px;
-    height: 400px;
-    padding: 30px;
-    margin: 10px;
-    border: 1px solid black;
-    box-shadow: 3px 3px 5px grey;
+    width: 200px;
+    height: 200px;
     vertical-align: bottom;
     }
     div.row > div > img {
     display: inline-block;
-    position: absolute;
-    width: 400px;
-    bottom: 30px;
+    width: 200px;
     }
     .visible {
     visibility: visible;
@@ -27,3 +27,8 @@ div.container, div.row, form {
     .done {
     visibility: visible;
     }
+
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
