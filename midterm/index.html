@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="styles.css">
+	<title>CS355 Midterm Part B</title>
+</head>
+
+<script>
+	$("document").ready(function(){
+		var images = [];
+    for (var i = 0; i < 9; i++) {
+  images.push(i+".png");
+}
+    
+var imagesused = [];
+$('.container div:not(.row)').each(function() {
+    var rand = Math.floor(Math.random() * images.length);
+    $(this).append('<img src="' + images[rand] + '"/>');
+    if (imagesused.indexOf(images[rand]) != -1) images.splice(rand, 1);
+    else imagesused.push(images[rand]);
+    console.log(images);
+});
+});
+</script>
+
+<body>
+	<h1>Image Scrambler</h1>
+	<h2>by Brian Uminga [CS355]</h2>
+
+<div class="container">
+ <div class="row">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+ </div>
+ <div class="row">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+ </div>
+ <div class="row">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+ </div>
+ </div>
+ <form>
+ <input type="button" value="Play again">
+ </form>
+</body>
