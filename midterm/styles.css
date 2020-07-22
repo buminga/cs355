@@ -1,46 +1,68 @@
+/* Styling / General CSS */
 body {
     background: #333; 
     color: white;
+      -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+   backface-visibility: hidden;   
+
+   padding: 0;
 }
 
 h1, h2 {
     text-align: center;
 }
 
-div.container, div.row, form {
+.visible {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.done {
+    visibility: visible;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+/* Div Grid */
+.container, .row {
     width: 600px;
     margin: 0 auto;
-    clear: both;
-    }
-    div.row > div {
+}
+
+.row > div {
     position: relative;
     float: left;
     width: 200px;
     height: 200px;
     vertical-align: bottom;
-    }
-    div.row > div > img {
-    display: inline-block;
-    width: 200px;
-    }
-    .visible {
-    visibility: visible;
-    }
-    .hidden {
-    visibility: hidden;
-    }
-    .done {
-    visibility: visible;
-    }
-
-.container {
-    width: 600px;
-    height: 600px;
-    margin: 0 auto;
 }
 
-.clearfix {
-    overflow: auto;
+.imgBox{
+    display: block;
+    width: 200px;
+    position:relative;
+}
+
+/*
+.divImg {
+    position: absolute;
+}
+
+.divImg:hover {
+    border: 1px solid #000;
+    border-color: red;
+}
+*/
+
+.check {
+    z-index: -1;
 }
 
 #swap {

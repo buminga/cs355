@@ -3,33 +3,10 @@
 <head>
 	<meta charset="utf-8"/>
 	<link rel="stylesheet" href="styles.css">
-	<title>CS355 Midterm Part B</title>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-  <script>
-  $("document").ready(function(){
-    var images = [];
-    for (var i = 1; i < 10; i++) {
-      images.push("https://buminga.github.io/cs355/midterm/img/" + i + ".png");
-   }
-    
-  var imagesused = [];
-  $('.container div:not(.row)').each(function() {
-      var rand = Math.floor(Math.random() * images.length);
-      $(this).append('<img src="' + images[rand] + '"/>');
-      images.splice(rand, 1);
-      console.log(images);
-  });
-  });
-
-    var clicks = 0;
-    function swapCount() {
-        clicks += 1;
-        document.getElementById("clicks").innerHTML = clicks;
-    };
-
-</script>
+  <script src="https://buminga.github.io/cs355/midterm/jquery_script.js"></script>;
+	
+  <title>CS355 Midterm Part B</title>
 </head>
 
 <body>
@@ -37,29 +14,32 @@
 	<h2>by Brian Uminga [CS355]</h2>
 
 <div class="container">
+  <form>
  <div class="row">
-  <div id="tL"></div>
-  <div id="tM"></div>
-  <div id="tR"></div>
+  <div class="divImg" id="d1"></div>
+  <div class="divImg" id="d2"></div>
+  <div class="divImg" id="d3"></div>
  </div>
  <div class="row">
-  <div id="mL"></div>
-  <div id="mM"></div>
-  <div id="mR"></div>
+  <div class="divImg" id="d4"></div>
+  <div class="divImg" id="d5"></div>
+  <div class="divImg" id="d6"></div>
  </div>
  <div class="row">
-  <div id="bL"></div>
-  <div id="bM"></div>
-  <div id="bR"></div>
+  <div class="divImg" id="d7"></div>
+  <div class="divImg" id="d8"></div>
+  <div class="divImg" id="d9"></div>
  </div>
 </div>
 
 <div class="clearfix"></div>
 
  <div id="bottomMenu">
-  <p style="text-align: center;">Moves: <a id="clicks">0</a></p>
- <button id="swap" onClick="swapCount()">Swap</button>
+  <p style="text-align: center;">Moves: <a id="swapCounter">0</a></p>
+ <button type="button" id="swap" onClick="swapCount()">Swap</button>
+ </form>
  <button id="scramble" onClick="window.location.reload();">Scramble Me</button>
+
 </div>
     
 </body>
