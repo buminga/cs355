@@ -1,3 +1,8 @@
+body {
+    background: #333; 
+    color: white;
+}
+
 h1, h2 {
     text-align: center;
 }
