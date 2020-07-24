@@ -1,10 +1,21 @@
+<!--** ---------------------------
+    ** Brian Uminga
+    ** CUNY ID: 23190424
+    ** CS 355 - 17 (10:00 - 11:34)
+    ** Midterm Part B
+    ** https://buminga.github.io/cs355/midterm/
+    **
+    ** index.html
+    ** ---------------------------
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
 	<link rel="stylesheet" href="styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://buminga.github.io/cs355/midterm/jquery_script.js"></script>;
+  <script src="jquery_script.js"></script>
 	
   <title>CS355 Midterm Part B</title>
 </head>
@@ -13,10 +24,59 @@
 	<h1>Image Scrambler</h1>
 	<h2>by Brian Uminga [CS355]</h2>
 
+<!--
+<div class="container">
+  <div class="row">
+    <input type="checkbox" id="cb1" />
+    <input type="checkbox" id="cb2" />
+    <input type="checkbox" id="cb3" />
+  </div>
+  <div class="row">
+    <input type="checkbox" id="cb4" />
+    <input type="checkbox" id="cb5" />
+    <input type="checkbox" id="cb6" />
+  </div>
+  <div class="row">
+    <input type="checkbox" id="cb7" />
+    <input type="checkbox" id="cb8" />
+    <input type="checkbox" id="cb9" />
+  </div>
+</div>-->
+
+<div class="container">
+  <div class="row">
+    <label for="cb1">
+    </label>
+    <label for="cb2">
+    </label>
+    <label for="cb3">
+    </label>
+  </div>
+  <div class="row">
+    <label for="cb4">
+    </label>
+    <label for="cb5">
+    </label>
+    <label for="cb6">
+    </label>
+  </div>
+  <div class="row">
+    <label for="cb7">
+    </label>
+    <label for="cb8">
+    </label>
+    <label for="cb9">
+    </label>
+  </div>
+</div>
+
+<!--
 <div class="container">
   <form>
  <div class="row">
+  <label for="cb">
   <div class="divImg" id="d1"></div>
+  </label>
   <div class="divImg" id="d2"></div>
   <div class="divImg" id="d3"></div>
  </div>
@@ -31,12 +91,14 @@
   <div class="divImg" id="d9"></div>
  </div>
 </div>
+-->
+
 
 <div class="clearfix"></div>
 
  <div id="bottomMenu">
   <p style="text-align: center;">Moves: <a id="swapCounter">0</a></p>
- <button type="button" id="swap" onClick="swapCount()">Swap</button>
+ <button type="button" id="swap" onClick="swap()">Swap</button>
  </form>
  <button id="scramble" onClick="window.location.reload();">Scramble Me</button>
 
