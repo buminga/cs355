@@ -47,7 +47,7 @@ h1, h2 {
     margin: 0 auto;
 }
 
-.row > label {
+.row > label, .tile {
     position: relative;
     float: left;
     width: 200px;
@@ -60,17 +60,6 @@ h1, h2 {
     width: 200px;
     position:relative;
 }
-
-/*
-.divImg {
-    position: absolute;
-}
-
-.divImg:hover {
-    border: 1px solid #000;
-    border-color: red;
-}
-*/
 
 .check {
     display: none;
