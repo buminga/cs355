@@ -13,30 +13,13 @@
 body {
     background: #333; 
     color: white;
-    padding: 0;
 }
 
 h1, h2 {
     text-align: center;
 }
 
-.visible {
-    visibility: visible;
-}
-
-.hidden {
-    visibility: hidden;
-}
-
-.done {
-    visibility: visible;
-}
-
-.clearfix {
-    overflow: auto;
-}
-
-/* Div Grid */
+/* Grid */
 .container {
     height: 600px;
     border: 5px solid black;
@@ -108,6 +91,10 @@ label img {
 
 #swap {
     float: right;
+}
+
+#scramble {
+    float: left;
 }
 
 #bottomMenu {
