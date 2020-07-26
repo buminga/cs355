@@ -3,20 +3,22 @@
     ** CUNY ID: 23190424
     ** CS 355 - 17 (10:00 - 11:34)
     ** Midterm Part B
-    ** https://buminga.github.io/cs355/midterm/
+    ** Interactive Page: https://buminga.github.io/cs355/midterm/
+    ** Code: https://github.com/buminga/cs355/tree/master/midterm
     **
     ** styles.css
     ** ---------------------------
-*****/
+******/
 
 /* Styling / General CSS */
 body {
     background: #333; 
     color: white;
+    text-align: center;
 }
 
-h1, h2 {
-    text-align: center;
+#linkToCode {
+    font-size: 20px;
 }
 
 /* Grid */
@@ -25,7 +27,7 @@ h1, h2 {
     border: 5px solid black;
 }
 
-.container, .row {
+.container, .row, #bottomMenu {
     width: 600px;
     margin: 0 auto;
 }
@@ -95,9 +97,4 @@ label img {
 
 #scramble {
     float: left;
-}
-
-#bottomMenu {
-    width: 600px;
-    margin: 0 auto;
 }

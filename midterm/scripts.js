@@ -1,12 +1,13 @@
 /***** ---------------------------
- ** Brian Uminga
- ** CUNY ID: 23190424
- ** CS 355 - 17 (10:00 - 11:34)
- ** Midterm Part B
- ** https://buminga.github.io/cs355/midterm/
- **
- ** scripts.js
- ** ---------------------------
+    ** Brian Uminga
+    ** CUNY ID: 23190424
+    ** CS 355 - 17 (10:00 - 11:34)
+    ** Midterm Part B
+    ** Interactive Page: https://buminga.github.io/cs355/midterm/
+    ** Code: https://github.com/buminga/cs355/tree/master/midterm
+    **
+    ** scripts.js
+    ** ---------------------------
  *****/
 
 $("document").ready(function() {
@@ -19,7 +20,7 @@ $("document").ready(function() {
         images.push(imageDir + i + imageExt);
     }
 
-    // scramble image order & insert <img> tags into div > label
+    // scramble image order & insert <img> tags into 'div > label'
     $('label').each(function() {
         var rand = Math.floor(Math.random() * images.length);
         $(this).append('<img class="imgBox" src="' + images[rand] + '"/>');
@@ -30,7 +31,7 @@ $("document").ready(function() {
     var cbCt = 1;
     var labelStr = 'label[for="cb';
     $('img.imgBox').each(function() {
-        $(labelStr + cbCt).before('<input type="checkbox" class="check" id=cb' + cbCt + ' />'); // add before img tag so checkbox is in front of img 
+        $(labelStr + cbCt).before('<input type="checkbox" class="check" id=cb' + cbCt + ' />'); 
         cbCt += 1;
     });
 
@@ -48,9 +49,10 @@ $("document").ready(function() {
     var swapCt = 0;
     $('#swap').click(function() {
         // make sure 2 boxes are checked, send error if <= 1
-        var checkedBoxes = $(".check:checked").length;
-        if (checkedBoxes <= 1) {
+        var checkedQty = $(".check:checked").length;
+        if (checkedQty <= 1) {
             alert("Must select 2 pictures.");
+            checkedQty = 0;
         } else {
 
             // save html of checked images
@@ -75,9 +77,10 @@ $("document").ready(function() {
                 theLength = 0;
                 tempToSwitch = "";
                 toSwitch = "";
+                checkedQty = 0;
             });
 
-            // save values of img files (#1-9)
+            // save values of img files in the order of the grid
             var checkImgs = [];
             var toCheckCt = 0;
             $('img').each(function() {
@@ -85,16 +88,17 @@ $("document").ready(function() {
                 checkImgs.push(toCheck.slice(44, 45));
             });
 
-            // check if in order
+            // check if in order by comparing img #s
             var success = 0;
             for (var i = 1; i < 10; i++) {
                 if (i == checkImgs[i-1]) {
                     success += 1;
                 }
             }
+            
             // display win message
             if (success == 9) {
-                alert("Congratulations! You won in " + swapCt + " moves");
+                alert("Congratulations! You won in " + swapCt + " moves.");
                 swapCt = 0;
             }
         }
